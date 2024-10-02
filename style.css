@@ -14,7 +14,6 @@
   --surface-color-hover: rgba(255, 255, 255, 0.05);
   --social-color-hover: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/moon-stars.svg);
-  
 }
 
 .light {
@@ -87,11 +86,16 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-to-left 0.3s;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--social-color-hover);
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-to-right 0.3s forwards;
 }
 
 #switch span {
@@ -157,6 +161,25 @@ footer {
   font-size: 14px;
   padding: 24px;
   text-align: center;
+}
+
+/* Animations */
+@keyframes slide-to-right {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-to-left {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
 
 /* Media Queries */
