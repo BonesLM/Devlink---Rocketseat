@@ -1,3 +1,4 @@
+// Adicionar e remover a classe .light no HTML
 function toggleMode() {
   const html = document.documentElement
 
